@@ -1,0 +1,198 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+  
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -64.5px;
+    margin-top: -85.5px;
+  }
+  
+  .ghost {
+    animation: float 3s ease-out infinite;
+  }
+  
+  @keyframes float {
+    50% {
+       transform: translate(0, 20px);
+    }
+  }
+  .shadowFrame {
+    width: 130px;
+    margin-top: 15px;
+  }
+  .shadow {
+    animation: shrink 3s ease-out infinite;
+    transform-origin: center center;
+    ellipse {
+      transform-origin: center center;
+    }
+  }
+  
+  @keyframes shrink {
+    0% {
+      width: 90%;
+      margin: 0 5%;
+    }
+    50% {
+      width: 60%;
+      margin: 0 18%;
+    }
+    100% {
+      width: 90%;
+      margin: 0 5%;
+    }
+  }
+  .compsoul-background-container {
+    position: relative;
+  }
+  
+  .compsoul-background-heading {
+    color: #ffffff;
+    font-size: 10vw;
+    font-weight: 800;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .compsoul-background {
+    --blur: 140px;
+    --opacity: 0.5;
+    --speed: 32s;
+    background-image: linear-gradient(to right, rgb(226, 131, 6), #ee6e05, #828550);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .compsoul-background .shape-waves {
+    --color: #8512f1;
+    --size: 72vw;
+    background: radial-gradient(circle at 50% 100%, transparent 20%, var(--color) 20%, var(--color) 50%, transparent 50%, transparent),
+                radial-gradient(circle at 50% 0, transparent 20%, var(--color) 20%, var(--color) 50%, transparent 50%, transparent) calc( var(--size) * 0.5 ) 0;
+    background-size: var(--size) calc( var(--size) * 0.5 );
+    display: block;
+    filter: blur( var(--blur) );
+    height: 100%;
+    opacity: var(--opacity);
+    width: 100%;
+  }
+  
+  .compsoul-background .shape-square {
+    --color: #ff06B7;
+    --size: 32vw; 
+    background: var(--color);
+    display: block;
+    filter: blur( var(--blur) );
+    height: var(--size);
+    left: calc( var(--size) * -0.25 );
+    opacity: var(--opacity);
+    position: absolute;
+    top: calc( var(--size) * -0.25 );
+    width: var(--size);
+  }
+  
+  .compsoul-background .shape-triangle {
+    --color: #ee3b05;
+    --size: 28vw;
+    animation: compsoul-background var(--speed) linear infinite;
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: calc( var(--size) * 2 ) solid var(--color);
+    bottom: calc( var(--size) * -0.25 );
+    display: block;
+    filter: blur( var(--blur) );
+    height: 0;
+    left: calc( var(--size) * 2 );
+    opacity: var(--opacity);
+    position: absolute;
+    width: 0;
+  }
+  
+  .compsoul-background .shape-rectangle {
+    --color: #330099;
+    --size: 32vw; 
+    background: var(--color);
+    display: block;
+    filter: blur( var(--blur) );
+    height: var(--size);
+    left: 20%;
+    opacity: var(--opacity);
+    position: absolute;
+    top: calc( var(--size) * -0.25 );
+    width: calc( var(--size) * 2 );
+  }
+  
+  .compsoul-background .shape-circle {
+    --color: #470947;
+    --size: 54vw;
+    animation: compsoul-background var(--speed) ease-in-out infinite;
+    background: var(--color);
+    border-radius: 100%;
+    display: block;
+    filter: blur( var(--blur) );
+    height: var(--size);
+    opacity: var(--opacity);
+    position: absolute;
+    right: calc( var(--size) * -0.25 );
+    top: calc( var(--size) * -0.25 );
+    width: var(--size);
+  }
+  
+  .compsoul-background .shape-trapezoid {
+    --color: #9900FF;
+    --size: 8vw;
+    animation: compsoul-background var(--speed) linear infinite;
+    border-bottom: calc( var(--size) * 4 ) solid var(--color);
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    bottom: calc( var(--size) * -0.25 );
+    display: block;
+    filter: blur( var(--blur) );
+    height: 0;
+    opacity: var(--opacity);
+    right: 30%;
+    position: absolute;
+    width: calc( var(--size) * 4 );
+  }
+  
+  .compsoul-background .shape-parallelogram {
+    --color: #32069a;
+    --size: 32vw;
+    animation: compsoul-background var(--speed) linear infinite;
+    background: var(--color);
+    bottom: calc( var(--size) * -0.25 );
+    display: block;
+    filter: blur( var(--blur) );
+    height: var(--size);
+    left: calc( var(--size) * -0.25 );
+    opacity: var(--opacity);
+    position: absolute;
+    transform: skew(-20deg);
+    width: var(--size);
+  }
+  
+  @keyframes compsoul-background {
+    0% {
+      transform: rotate(0) translate(0, 0);
+    }
+    25% {
+      transform: rotate(90deg) translate(-100%, -100%);
+    }
+    50% {
+      transform: rotate(180deg) translate(0, 0);
+    }
+    75% {
+      transform: rotate(270deg) translate(100%, 100%);
+    }
+    100% {
+      transform: rotate(360deg) translate(0, 0);
+    }
+  }

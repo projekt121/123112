@@ -1,0 +1,273 @@
+*{
+    padding: 0px;
+    padding-top: 0px;
+    margin: 0px;
+}
+
+button {
+   
+    background: transparent;
+    /*dopełnienie ze wszystkich stron 25px;*/
+    padding: 15px;
+    /*obramowanie - szerokość 2px, linia ciągła, kolor biały*/
+    border: 2px solid #fff;
+    /*kolor czcionki*/
+    color: #fff;
+    /*teraz dodamy efekt płynnego przejścia*/
+    transition: 0.5s;
+    left: 50%;
+    position: absolute;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1  
+    
+}
+  
+  /*możemy teraz opisać jak ma wyglądać przycisk po najechaniu na niego kursorem*/
+ button:hover {
+    /*tło - kolor biały*/
+    background: #fff;
+    /*czcionka w kolorze tła strony*/
+    color: #415967;
+    /*możemy również zmienić rodzaj kursora, np. na "łapkę"*/
+    cursor: pointer;
+    left: 50%;
+    position: absolute;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 1  
+    
+}
+.centered-box {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7); /* Kolor tła z przezroczystością */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px; /* Dostosuj szerokość do własnych preferencji */
+}
+
+
+
+
+
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background: transparent;
+  /*dopełnienie ze wszystkich stron 25px;*/
+  padding: 15px;
+  /*obramowanie - szerokość 2px, linia ciągła, kolor biały*/
+  border: 2px solid #fff;
+  /*kolor czcionki*/
+  color: #fff;
+  /*teraz dodamy efekt płynnego przejścia*/
+  transition: 0.5s;
+  left: 50%;
+  position: absolute;
+  top: 120%;
+  transform: translate(-50%, -50%);
+  z-index: 1  
+  
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(184, 158, 178);
+}
+
+.error {
+    color: #ff3333;
+    margin-top: 10px;
+}
+
+.compsoul-background-container {
+    position: relative;
+  }
+  
+  .compsoul-background-heading {
+    color: #ffffff;
+    font-size: 10vw;
+    font-weight: 800;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  .compsoul-background {
+    --blur: 140px;
+    --opacity: 0.5;
+    --speed: 32s;
+    background-image: linear-gradient(to right, rgb(226, 131, 6), #ee6e05, #645085);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .compsoul-background .shape-waves {
+    --color: #8512f1;
+    --size: 72vw;
+    background: radial-gradient(circle at 50% 100%, transparent 20%, var(--color) 20%, var(--color) 50%, transparent 50%, transparent),
+                radial-gradient(circle at 50% 0, transparent 20%, var(--color) 20%, var(--color) 50%, transparent 50%, transparent) calc( var(--size) * 0.5 ) 0;
+    background-size: var(--size) calc( var(--size) * 0.5 );
+    display: block;
+    filter: blur( var(--blur) );
+    height: 100%;
+    opacity: var(--opacity);
+    width: 100%;
+  }
+  
+  .compsoul-background .shape-square {
+    --color: #ff06B7;
+    --size: 32vw; 
+    background: var(--color);
+    display: block;
+    filter: blur( var(--blur) );
+    height: var(--size);
+    left: calc( var(--size) * -0.25 );
+    opacity: var(--opacity);
+    position: absolute;
+    top: calc( var(--size) * -0.25 );
+    width: var(--size);
+  }
+  
+  .compsoul-background .shape-triangle {
+    --color: #ee3b05;
+    --size: 28vw;
+    animation: compsoul-background var(--speed) linear infinite;
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    border-bottom: calc( var(--size) * 2 ) solid var(--color);
+    bottom: calc( var(--size) * -0.25 );
+    display: block;
+    filter: blur( var(--blur) );
+    height: 0;
+    left: calc( var(--size) * 2 );
+    opacity: var(--opacity);
+    position: absolute;
+    width: 0;
+  }
+  
+  .compsoul-background .shape-rectangle {
+    --color: #330099;
+    --size: 32vw; 
+    background: var(--color);
+    display: block;
+    filter: blur( var(--blur) );
+    height: var(--size);
+    left: 20%;
+    opacity: var(--opacity);
+    position: absolute;
+    top: calc( var(--size) * -0.25 );
+    width: calc( var(--size) * 2 );
+  }
+  
+  .compsoul-background .shape-circle {
+    --color: #470947;
+    --size: 54vw;
+    animation: compsoul-background var(--speed) ease-in-out infinite;
+    background: var(--color);
+    border-radius: 100%;
+    display: block;
+    filter: blur( var(--blur) );
+    height: var(--size);
+    opacity: var(--opacity);
+    position: absolute;
+    right: calc( var(--size) * -0.25 );
+    top: calc( var(--size) * -0.25 );
+    width: var(--size);
+  }
+  
+  .compsoul-background .shape-trapezoid {
+    --color: #9900FF;
+    --size: 8vw;
+    animation: compsoul-background var(--speed) linear infinite;
+    border-bottom: calc( var(--size) * 4 ) solid var(--color);
+    border-left: var(--size) solid transparent;
+    border-right: var(--size) solid transparent;
+    bottom: calc( var(--size) * -0.25 );
+    display: block;
+    filter: blur( var(--blur) );
+    height: 0;
+    opacity: var(--opacity);
+    right: 30%;
+    position: absolute;
+    width: calc( var(--size) * 4 );
+  }
+  
+  .compsoul-background .shape-parallelogram {
+    --color: #32069a;
+    --size: 32vw;
+    animation: compsoul-background var(--speed) linear infinite;
+    background: var(--color);
+    bottom: calc( var(--size) * -0.25 );
+    display: block;
+    filter: blur( var(--blur) );
+    height: var(--size);
+    left: calc( var(--size) * -0.25 );
+    opacity: var(--opacity);
+    position: absolute;
+    transform: skew(-20deg);
+    width: var(--size);
+  }
+  
+  @keyframes compsoul-background {
+    0% {
+      transform: rotate(0) translate(0, 0);
+    }
+    25% {
+      transform: rotate(90deg) translate(-100%, -100%);
+    }
+    50% {
+      transform: rotate(180deg) translate(0, 0);
+    }
+    75% {
+      transform: rotate(270deg) translate(100%, 100%);
+    }
+    100% {
+      transform: rotate(360deg) translate(0, 0);
+    }
+  }
+  
+form{
+text-align: center;
+width: 200px;
+left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+margin: 0px;
+padding: 0px;
+}
+
+.glowny
+{
+  color: #ffffff;
+
+  font-weight: 8;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.glowny2
+{
+  color: #ffffff;
+
+  font-weight: 8;
+  left: 50%;
+  position: absolute;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
